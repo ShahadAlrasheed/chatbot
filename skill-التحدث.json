@@ -1,0 +1,396 @@
+{
+  "intents": [
+    {
+      "intent": "استغلال_الوقت",
+      "examples": [
+        {
+          "text": "اقتراحات عشان استغل وقتي"
+        },
+        {
+          "text": "عندي وقت فاضي وش اسوي ؟"
+        },
+        {
+          "text": "غيره"
+        },
+        {
+          "text": "فاضيه"
+        },
+        {
+          "text": "ماعندي شي اسويه"
+        },
+        {
+          "text": "ملل"
+        },
+        {
+          "text": "وش بعد ؟"
+        },
+        {
+          "text": "وش بعد ؟؟"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "ترحيب",
+      "examples": [
+        {
+          "text": "السلام عليكم"
+        },
+        {
+          "text": "اهلا"
+        },
+        {
+          "text": "اهلين"
+        },
+        {
+          "text": "مرحبا"
+        },
+        {
+          "text": "هاي"
+        },
+        {
+          "text": "هلا"
+        },
+        {
+          "text": "هيلو"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "حجوزات",
+      "examples": [
+        {
+          "text": "اقدر احجز ؟"
+        },
+        {
+          "text": "متوفر حجز ؟"
+        },
+        {
+          "text": "هل عندكم حجز"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "شكرا",
+      "examples": [
+        {
+          "text": "ثانكيو"
+        },
+        {
+          "text": "شكرا"
+        },
+        {
+          "text": "شكرا جزيلا"
+        },
+        {
+          "text": "ماقصرتي شكرا"
+        },
+        {
+          "text": "يعطيك العافيه"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "نكهات",
+      "examples": [
+        {
+          "text": "ابي اسوي كيكه"
+        },
+        {
+          "text": "اي نكهه"
+        },
+        {
+          "text": "كيكه ايش ؟"
+        },
+        {
+          "text": "محتاره اي نكه عطيني رايك"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "وداع",
+      "examples": [
+        {
+          "text": "اشوفك على خير"
+        },
+        {
+          "text": "الى اللقاء"
+        },
+        {
+          "text": "باي"
+        },
+        {
+          "text": "مع السلامه"
+        },
+        {
+          "text": "وداعا"
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "entities": [
+    {
+      "entity": "فواكه",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "اناناس",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "برتقال",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "تفاح",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "تين",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "جح",
+          "synonyms": [
+            "بطيخ",
+            "حبحب",
+            "رقي"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "خوخ",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "شمام",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "فراوله",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "موز",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "يوسفندي",
+          "synonyms": [
+            "افنديه",
+            "برتقاله صغيره"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    },
+    "from-sample": true
+  },
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "كيكه الليمون "
+              },
+              {
+                "text": "كيكه شوكولاته"
+              },
+              {
+                "text": "كيكه ردفلفت"
+              },
+              {
+                "text": "كيكه البرتقال"
+              },
+              {
+                "text": "او تارت التفاح"
+              },
+              {
+                "text": "كيكه الجزر"
+              },
+              {
+                "text": "كيكه التمر"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#نكهات",
+      "dialog_node": "node_10_1625608924097",
+      "previous_sibling": "node_9_1625599022101"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "العفو :)"
+              },
+              {
+                "text": "ماسويت شي ^_^ "
+              },
+              {
+                "text": "ياهلا اسأليني متى مابغيتي "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#شكرا",
+      "dialog_node": "node_2_1625599438268",
+      "previous_sibling": "node_10_1625608924097"
+    },
+    {
+      "type": "standard",
+      "title": "ترحيب",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "ياهلا اسألني "
+              },
+              {
+                "text": "مرحبا "
+              },
+              {
+                "text": "اهين وسهلين"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "random"
+          }
+        ]
+      },
+      "conditions": "#ترحيب",
+      "dialog_node": "node_9_1625539373436",
+      "previous_sibling": "مرحبا"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "اقرأ "
+              },
+              {
+                "text": "سوي رياضه "
+              },
+              {
+                "text": "سوي حلى"
+              },
+              {
+                "text": "سوي كيكه "
+              },
+              {
+                "text": "اهتمي ببشرتك ^-^"
+              },
+              {
+                "text": "سوي مساج :)"
+              },
+              {
+                "text": "نومي"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#استغلال_الوقت",
+      "dialog_node": "node_9_1625599022101",
+      "previous_sibling": "node_9_1625539373436"
+    },
+    {
+      "type": "standard",
+      "title": "أي شيء آخر",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "مع السلامة "
+              },
+              {
+                "text": "وداعا"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#وداع",
+      "dialog_node": "أي شيء آخر",
+      "previous_sibling": "node_2_1625599438268",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "standard",
+      "title": "مرحبا",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "مرحبا"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "welcome",
+      "dialog_node": "مرحبا"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "disambiguation": {
+      "prompt": ":هل قصدت",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "كل ما سبق خطأ"
+    },
+    "human_agent_assist": {
+      "prompt": ":هل قصدت"
+    }
+  },
+  "learning_opt_out": false,
+  "name": "التحدث",
+  "language": "ar",
+  "description": ""
+}
